@@ -14,7 +14,6 @@
             >
 
             <div id="ProductDetails">
-            
                 <span class="flex items-center justify-start gap-3 px-1 pt-1">
                     <span class="text-[#FF6674] font-semibold">${{ priceComputed }}</span>
                     <span class="text-gray-500 text-sm text-light line-through">${{ oldPriceComputed }}</span>

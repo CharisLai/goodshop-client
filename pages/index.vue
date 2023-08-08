@@ -2,7 +2,7 @@
     <MainLayout>
         <div d="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
 
-            <div class="grid xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-4 sm:grid-col-3 grid-cols-2 gap-4">
+            <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-col-3 grid-cols-2 gap-4">
                 <div v-if="products" v-for="product in products" :key="product">
 
                     <ProductComponent :product="product"/>
