@@ -79,6 +79,8 @@
                     <div id="PaymentProtection" class="bg-white rounded-lg p-4 mt-4">
                         <div class="text-lg font-semibold mb-2">Payment methods</div>
                         <div class="flex items-center justify-start gap-8 my-4">
+
+                            <!--付款圖示-->
                             <div v-for="card in cards">
                                 <img class="h-6" :src="card">
                             </div>
@@ -100,7 +102,7 @@ let selectedArray = ref([])
 onMounted(() => {
     setTimeout(() => userStore.isLoading = false, 200)
 })
-
+// 付款方式圖示
 const cards = ref([
     'visa.png',
     'mastercard.png',
@@ -108,6 +110,7 @@ const cards = ref([
     'applepay.png',
 ])
 
+// 計算金額
 const totalPriceComputed = computed(() => {
     let price = 0
     userStore.cart.forEach(prod => {
@@ -117,16 +120,18 @@ const totalPriceComputed = computed(() => {
 })
 
 const selectedRadioFunc = (e) => {
-
+// 檢查清單是否為空
 if (!selectedArray.value.length) {
     selectedArray.value.push(e)
     return
 }
-
+// 遍歷清單中的商品
 selectedArray.value.forEach((item, index) => {
+    // 是否已選中
     if (e.id != item.id) {
         selectedArray.value.push(e)
     } else {
+        // 移除已選中的商品
         selectedArray.value.splice(index, 1);
     }
 })
