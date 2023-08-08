@@ -135,8 +135,8 @@
 </template>
 
 <script setup>
-import { userUserStore } from '~/stores/user';
-const userStore = userUserStore()
+import { useUserStore } from '~/stores/user';
+const userStore = useUserStore()
 
 let isAccountMenu = ref(false)
 let isCartHover = ref(false)

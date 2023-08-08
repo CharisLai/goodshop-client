@@ -36,7 +36,7 @@
                         </span>
                         <p class="text-[#FF5353]">Extra 5% off</p>
                     </div>
-                     <!--星級 評比-->
+                    <!--星級 評比-->
                     <div class="flex items-center justify-start my-2">
                         <Icon name="ic:baseline-star" color="#FF5353"/>
                         <Icon name="ic:baseline-star" color="#FF5353"/>

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const userUserStore = defineStore('user', {
+export const useUserStore = defineStore('user', {
     state: () => ({
         isMenuOverlay: false,
         isLoading: false,
