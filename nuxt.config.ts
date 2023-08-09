@@ -2,24 +2,26 @@
 export default defineNuxtConfig({
   pages: true,
   modules: [
-    'nuxt-icon',
-    'nuxt-lodash',
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    '@nuxtjs/tailwindcss',
-    // '@nuxtjs/supabase'
+      'nuxt-icon',
+      'nuxt-lodash',
+      '@pinia/nuxt',
+      '@pinia-plugin-persistedstate/nuxt',
+      '@nuxtjs/tailwindcss',
+      '@nuxtjs/supabase'
   ],
+  supabase: {
+    redirect: false
+  },
   runtimeConfig: {
-    public: {
-      stripePk: process.env.STRIPE_PK_KEY
-    }
+      public: {
+        stripePk: process.env.STRIPE_PK_KEY
+      }
   },
   app: {
-    head: {
-      script: [
-        { src: 'http://js.stripe.com/v3/', defer: true }
-      ]
+      head: {
+        script: [
+          { src: 'https://js.stripe.com/v3/', defer: true }
+        ],
+      }
     }
-  },
-  telemetry: false
 })
