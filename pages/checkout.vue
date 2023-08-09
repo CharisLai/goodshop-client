@@ -48,7 +48,7 @@
                                 class="flex items-center text-blue-500 hover:text-red-400">
                                 <Icon name="mdi:plus" size="18" class="mr-2"/>
                                 Add New Address
-                            </NuxtLink>
+                        </NuxtLink>
                     </div>
 
                     <div id="Items" class="bg-white rounded-lg p-4 mt-4">
