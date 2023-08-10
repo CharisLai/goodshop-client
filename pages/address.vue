@@ -101,7 +101,7 @@ watchEffect(async () => {
     if (currentAddress.value.data) {
         contactName.value = currentAddress.value.data.name
         address.value = currentAddress.value.data.address
-        zipCode.value = currentAddress.value.data.zipCode
+        zipCode.value = currentAddress.value.data.zipcode
         city.value = currentAddress.value.data.city
         country.value = currentAddress.value.data.country
 

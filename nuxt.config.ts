@@ -9,9 +9,6 @@ export default defineNuxtConfig({
       '@nuxtjs/tailwindcss',
       '@nuxtjs/supabase'
   ],
-  supabase: {
-    redirect: false
-  },
   runtimeConfig: {
       public: {
         stripePk: process.env.STRIPE_PK_KEY
