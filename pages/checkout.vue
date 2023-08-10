@@ -153,7 +153,7 @@ onBeforeMount(async () => {
         return navigateTo('/shoppingcart')
     }
 
-    total.value = 0.00
+    total.value = 0
     if (user.value) {
         currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`)
         setTimeout(() => userStore.isLoading = false, 200)

@@ -128,7 +128,7 @@ const isInCart = computed(() => {
 // 品項金額
 const priceComputed = computed(() => {
     if (product.value && product.value.data) {
-        return product.value.data.price
+        return product.value.data.price / 100
     }
     return '0'
 })

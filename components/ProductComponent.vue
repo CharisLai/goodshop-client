@@ -51,7 +51,7 @@ const props = defineProps(['product'])
 const { product } = toRefs(props)
 
 const priceComputed = computed(() => {
-    return product.value.price / 10
+    return product.value.price / 100
 })
 
 const oldPriceComputed = computed(() => {
