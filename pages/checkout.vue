@@ -118,9 +118,9 @@
                     </div>
 
                     <div class="bg-white rounded-lg p-4 mt-4">
-                        <div class="text-lg font-semibold mb-2 mt-2">AliExpress</div>
+                        <div class="text-lg font-semibold mb-2 mt-2">Goodshop</div>
                         <p class="my-2">
-                            AliExpress keeps your information and payment safe
+                            Goodshop keeps your information and payment safe
                         </p>
 
                     </div>
@@ -139,6 +139,8 @@ const userStore = useUserStore()
 const user = useSupabaseUser()
 const route = useRoute()
 
+definePageMeta({ middleware: "auth" })
+
 let stripe = null
 let elements = null
 let card = null
@@ -153,7 +155,7 @@ onBeforeMount(async () => {
         return navigateTo('/shoppingcart')
     }
 
-    total.value = 0
+    total.value = 0.00
     if (user.value) {
         currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`)
         setTimeout(() => userStore.isLoading = false, 200)
@@ -237,9 +239,10 @@ const pay = async () => {
         isProcessing.value = false
     } else {
         await createOrder(result.paymentIntent.id)
-        userStore.cart = []
-        userStore.checkout = []
+
         setTimeout(() => {
+            userStore.cart = []
+            userStore.checkout = []
             return navigateTo('/success')
         }, 500)
     }

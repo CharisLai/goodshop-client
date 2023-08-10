@@ -89,7 +89,7 @@
                                         <img class="rounded-md" width="40" :src="item.url">
                                         <div class="truncate ml-2">{{ item.title }}</div>
                                     </div>
-                                    <div class="truncate"> NT${{item.price / 10 }}</div>
+                                    <div class="truncate">${{item.price }}</div>
                                 </NuxtLink>
                             </div>
                         </div>
@@ -148,6 +148,8 @@ let isCartHover = ref(false)
 let isSearching = ref(true)
 let searchItem = ref('')
 let items = ref(null)
+
+onMounted(() => isSearching.value = false)
 
 const searchByName = useDebounce(async () => {
     isSearching.value = true
