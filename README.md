@@ -1,63 +1,35 @@
-# Nuxt 3 Minimal Starter
+# GooDShop 購物平台
+使用 Vue Nuxt supabase stripe 的練習作業。<br>
+- 使用者可以查看商品，添加商品到購物車，並進行結帳。
+- 使用者可以透過search bar 搜尋相關品項
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+信用卡支付測試卡號<br>
+4242 4242 4242 4242 12/24 XXX<br>
+註:(CVC隨意）*年份請輸入 數字23～以後的
 
-## Setup
-
-Make sure to install the dependencies:
-
+## 預先準備
+node.js 16.x
+## 安裝說明
+1. 下載
 ```bash
-# npm
+git clone https://github.com/CharisLai/goodshop-client.git
+```
+2. 安裝
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+3. 在專案的根目錄建立 .env 檔案
 ```bash
-# npm
+STRIPE_PK_KEY=
+STRIPE_SK_KEY=
+
+SUPABASE_URL=""
+SUPABASE_KEY=""
+```
+4. local 運行
+```bash
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
 ```
 
-## Production
+Deploy on netlify:  [Demo](https://master--admirable-croquembouche-a8a946.netlify.app/)
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
