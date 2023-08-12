@@ -2,7 +2,7 @@
     <div id="MenuOverlay" class="fixed z-50 bottom-0 h-full w-full bg-white px-3">
         <div class="flex items-center justify-between py-5">
             <NuxtLink to="/" @click="userStore.isMenuOverlay = false">
-                <img width="170" src="logo.png">
+                <img width="170" src="/logo.png" alt="Logo">
             </NuxtLink>
             <button 
                 @click="userStore.isMenuOverlay = false"
@@ -107,8 +107,8 @@
 import { useUserStore } from '~/stores/user';
 const userStore = useUserStore()
 
-// const client = useSupabaseClient()
-// const user = useSupabaseUser()
+const client = useSupabaseClient()
+
 const goTo = (url) => {
     userStore.isMenuOverlay = false
     return navigateTo(`/${url}`)
