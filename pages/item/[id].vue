@@ -56,7 +56,7 @@
                     <!--運送資訊-->
                     <p class="text-[#009A66] text-xs font-semibold pt-1">
                         <!--滿額免運-->
-                        Free 11-day delivery over NT%500
+                        Free 11-day delivery over $500
                     </p>
                     <!--免運-->
                     <p class="text-[#009A66] text-xs font-semibold pt-1">
